@@ -1,0 +1,324 @@
+/* Sticky Top Bar */
+.topbar {
+    background-color: hsl(110, 83%, 46%);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    position: fixed; /* Keeps the topbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.topbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 8px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon-link {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* Add padding to prevent content from overlapping with the top bar */
+
+
+
+
+/* Main Container Styling */
+.main-container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+/* Carousel Section Styling */
+.carousel-section {
+    margin: 0 auto;
+}
+
+/* Category Section Styling */
+.category-section-container {
+    padding: 30px;
+    position: relative; /* Needed for button positioning */
+    overflow: hidden; /* Hide items that overflow */
+    width: auto;
+}
+
+/* Category Section */
+.category-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adjust spacing */
+}
+
+.category-title {
+    /* text-align: center; */
+    font-size: 34px; /* Adjust font size */
+    font-weight: bold;
+    margin-bottom: 30px; /* Add space below the heading */
+    margin-top: 1px;
+}
+
+/* Categories Wrapper (to make it scrollable) */
+.categories-wrapper {
+    width: 100%; /* Adjust width to fit 4 items */
+    overflow: hidden; /* Hide extra items */
+}
+
+/* Categories Flex Styling */
+.categories {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
+    width: max-content; /* Prevent unnecessary wrapping */
+}
+
+/* Individual Category Items */
+.categories a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    flex: 0 0 calc(100% / 4 - 20px); /* Show 4 items at a time */
+}
+
+/* Category Navigation Buttons */
+.category-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.category-prev {
+    left: 10px;
+}
+
+.category-next {
+    right: 10px;
+}
+
+.category-nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Image Carousel Section Styling */
+.image-carousel-container {
+    width: auto;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-img {
+    width: 50%;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Navigation Buttons Styling */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.carousel-nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Gap Between Sections */
+.gap {
+    height: 10px;  /* Adds space between sections */
+    background-color: rgb(229, 223, 223);  /* Light background to visually separate sections */
+}
+
+
+/* item container */
+.items-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.main-content {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    width: 100%;
+    padding: 10px;
+}
+
+.item {
+    flex: 0 0 calc(100% / 6 - 15px); /* Show 6 items at a time */
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.scroll-button {
+    float: right;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.scroll-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* title css */
+/* Only apply flexbox to the p elements inside .listby */
+.listby {
+    height: auto;
+    background-color: rgb(229, 223, 223);
+    display: flex; /* Makes p elements display in a row */
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Aligns the items vertically */
+    gap: 280px; /* Adds spacing between the p elements */
+    flex-wrap: wrap; /* Allows wrapping of items if there are too many */
+}
+
+.listby p {
+    margin: 0; /* Removes default margin for p */
+    padding: 5px; /* Adds some padding for better visual appearance */
+    color: #333; /* Text color */
+    font-size: 25px; /* Adjust font size as needed */
+}
+
+/* If you have other <p> elements elsewhere, you can style them differently */
+p {
+    margin-bottom: 10px; /* Example of a global style that affects all <p> elements */
+}
+
+
+.items-title{
+    padding: 5px;
+    margin-left: 20px;
+    color: rgb(255, 85, 0);
+    text-align: center;
+}
+
+
+/* processor css */
+
+.processor-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Space out the items evenly */
+    flex-wrap: wrap; /* Allow items to wrap if they exceed the container width */
+    gap: 20px; /* Space between items */
+   /* Add some padding around the container */
+}
+
+.processor-item {
+    width: calc(33.33% - 20px); /* Each item takes up one-third of the container width minus the gap */
+    text-align: center;
+    margin-bottom: 20px; /* Space between rows if items wrap */
+}
+
+
+
+.processor-item img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.processer{
+    background-color: rgb(244, 240, 240);
+}
+
