@@ -270,7 +270,7 @@
                 // Processor image sources (adjust the image paths as per your files)
                 let processors = [];
                 for (let i = 1; i <= 6; i++) {
-                    processors.push(`${imageFolderPath}Processor%20(${i}).png`);
+                    processors.push(`${imageFolderPath}Processor(${i}).png`);
                 }
 
                 // Function to load processor images dynamically into the container
